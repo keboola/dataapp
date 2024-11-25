@@ -20,7 +20,6 @@ def get_table():
 def load_and_process_data():
     # Read the data table from Keboola
     df = get_table()
-    st.write(df)
     # Filter rows with JSON strings in the 'TEST_RESULT_VALUE' column
     def filter_conditions(value):
         return isinstance(value, str) and value.startswith('[{"OCCURRENCES"')
